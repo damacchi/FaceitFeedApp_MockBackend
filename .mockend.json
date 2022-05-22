@@ -37,7 +37,6 @@
         }
     },
     "AdditionalPost": {
-        //timestamp added at runtime to simulate new and old posts
         "userId": {
             "int": {
                 "min": 1,
