@@ -1,8 +1,5 @@
 {
     "User": {
-        "id": {
-            "string": {}
-        },
         "name": {
             "regexp": "^[A-Z][a-z]{5,10} [A-Z][a-z]{5,10}$"
         },
@@ -21,9 +18,36 @@
     },
     "Post": {
         "timestamp": {
-            "dateTime": {
-                "min": "2010-01-01T00:00:00Z",
-                "max": "2020-12-31T23:59:59Z"
+            "int": {
+                "min": 1652626286000,
+                "max": 1653238460000
+            }
+        },
+        "userId": {
+            "int": {
+                "min": 1,
+                "max": 100
+            }
+        },
+        "body": {
+            "loremSentences": {
+                "minLength": 10,
+                "maxLength": 100
+            }
+        }
+    },
+    "AdditionalPost": {
+        //timestamp added at runtime to simulate new and old posts
+        "userId": {
+            "int": {
+                "min": 1,
+                "max": 100
+            }
+        },
+        "body": {
+            "loremSentences": {
+                "minLength": 10,
+                "maxLength": 100
             }
         }
     }
